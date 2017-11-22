@@ -1,0 +1,22 @@
+{
+  "name": "AngelCategories",
+  "version": "0.1.0",
+  "summary": "A short description of AngelCategories.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/linyut/AngelCategories",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "linyut": "562887382@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/linyut/AngelCategories.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AngelCategories/Classes/**/*"
+}
