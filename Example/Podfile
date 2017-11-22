@@ -1,0 +1,6 @@
+use_frameworks!
+target 'AngelCategories_Tests' do
+  pod 'AngelCategories', :path => '../'
+  
+  
+end
