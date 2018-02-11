@@ -53,7 +53,15 @@
 
 /**  设置阴影  */
 -(void)shadow:(UIColor *)shadowColor opacity:(CGFloat)opacity radius:(CGFloat)radius offset:(CGSize)offset;
+//默认红色阴影
+- (void)defaultRedShadow;
+//默认灰色阴影
+- (void)defaultGrayShadow;
 
+//获取控件的控制器
+- (UIViewController *)viewController;
+
+//获取labbel的高度
 + (CGFloat)getLabelHeightByWidth:(CGFloat)width Title:(NSString *)title font:(UIFont *)font;
 
 @end

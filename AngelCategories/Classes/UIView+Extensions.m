@@ -175,6 +175,28 @@
     self.layer.shadowOffset = offset;
 }
 
+- (void)defaultRedShadow
+{
+    [self shadow:[UIColor colorWithRed:224/255.f green:46/255.f blue:68/255.f alpha:0.42] opacity:5.0 radius:3.0 offset:CGSizeMake(0, 3)];
+}
+
+- (void)defaultGrayShadow
+{
+    [self shadow:[UIColor colorWithRed:188/255.f green:196/255.f blue:201/255.f alpha:0.43] opacity:5.0 radius:3.0 offset:CGSizeMake(0, 3)];
+}
+
+- (UIViewController *)viewController {
+    
+    id nextResponder = [self nextResponder];
+    while (nextResponder != nil) {
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            UIViewController *vc = (UIViewController *)nextResponder;
+            return vc;
+        }
+        nextResponder = [nextResponder nextResponder];
+    }
+    return nil;
+}
 
 #pragma mark - base
 + (CGFloat)getLabelHeightByWidth:(CGFloat)width Title:(NSString *)title font:(UIFont *)font {
