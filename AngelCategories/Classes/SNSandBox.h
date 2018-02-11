@@ -10,19 +10,19 @@
 #import "SNDefines.h"
 
 // 程序目录，不能存任何东西
-SN_INLINE NSString* AppPath();
+SN_INLINE NSString* AppPath(void);
 
 // 文档目录，需要ITUNES同步备份的数据存这里
 SN_INLINE NSString* DocPath();
 
 // 配置目录，配置文件存这里
-SN_INLINE NSString* LibPrefPath();
+SN_INLINE NSString* LibPrefPath(void);
 
 // 缓存目录，系统永远不会删除这里的文件，ITUNES会删除
-SN_INLINE NSString* LibCachePath();
+SN_INLINE NSString* LibCachePath(void);
 
 // 缓存目录，APP退出后，系统可能会删除这里的内容
-SN_INLINE NSString* TmpPath();
+SN_INLINE NSString* TmpPath(void);
 
 // 创建目录
 SN_EXTERN NSString* TouchPath(NSString *path);
@@ -30,31 +30,31 @@ SN_EXTERN NSString* TouchPath(NSString *path);
 
 #pragma mark -
 
-SN_INLINE NSString* AppPath()
+SN_INLINE NSString* AppPath(void)
 {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, YES);
 	return [paths objectAtIndex:0];
 }
 
-SN_INLINE NSString* DocPath()
+SN_INLINE NSString* DocPath(void)
 {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	return [paths objectAtIndex:0];
 }
 
-SN_INLINE NSString* LibPrefPath()
+SN_INLINE NSString* LibPrefPath(void)
 {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
 	return [[paths objectAtIndex:0] stringByAppendingFormat:@"/Preference"];
 }
 
-SN_INLINE NSString* LibCachePath()
+SN_INLINE NSString* LibCachePath(void)
 {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
 	return [[paths objectAtIndex:0] stringByAppendingFormat:@"/Caches"];
 }
 
-SN_INLINE NSString* TmpPath()
+SN_INLINE NSString* TmpPath(void)
 {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
 	return [[paths objectAtIndex:0] stringByAppendingFormat:@"/tmp"];
