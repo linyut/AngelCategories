@@ -13,7 +13,7 @@
 SN_INLINE NSString* AppPath(void);
 
 // 文档目录，需要ITUNES同步备份的数据存这里
-SN_INLINE NSString* DocPath();
+SN_INLINE NSString* DocPath(void);
 
 // 配置目录，配置文件存这里
 SN_INLINE NSString* LibPrefPath(void);
